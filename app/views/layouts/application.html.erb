@@ -7,6 +7,7 @@
   <%= javascript_include_tag "https://js.stripe.com/v2/" %>
   <%= csrf_meta_tags %>
   <%= tag :meta, :name => "stripe-key", :content => ENV["STRIPE_PUBLIC_KEY"] %>
+  <script type="text/javascript" src="https://www.simplify.com/commerce/simplify.pay.js"></script>
 </head>
 <body>
 
@@ -24,9 +25,8 @@
   <% end %>
 
   <%= yield %>
-
+<div id="buy-with-masterpass-div"></div>
   <%= render 'layouts/footer' %>
 </div>
-
 </body>
 </html>

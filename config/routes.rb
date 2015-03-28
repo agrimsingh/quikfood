@@ -11,6 +11,9 @@ Quikfood::Application.routes.draw do
   get 'sales' => "orders#sales"
   get 'purchases' => "orders#purchases"
   get 'test_money_send' => "test#money_send"
+  
+  get 'simplify' => "test#simplify_new"
+  get 'simplify_confirm' => "test#simplify_create"
   root 'listings#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
