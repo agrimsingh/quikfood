@@ -20,3 +20,4 @@
 
 # Ignore files uploaded on localhost
 /public/system
+app/views/listings/index.html.erb

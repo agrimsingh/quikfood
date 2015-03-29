@@ -33,6 +33,14 @@
 
 <br>
 
+<%= 'Total Earnings: ' %>
+<% @listings.each do |listing| %>
+
+  <%= listing.orders.sum(:amount).to_f %>
+
+<% end %>
+<br />
+<br>
 <% if user_signed_in? %>
-  <%= link_to 'New Listing', new_listing_path, class: "btn btn-link", data: { no_turbolink: true } %>
+  <%= link_to 'Add a New Listing', new_listing_path, class: "btn btn-link", data: { no_turbolink: true } %>
 <% end %>
