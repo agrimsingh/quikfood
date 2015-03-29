@@ -1,0 +1,8 @@
+1. Add Seller/Purchaser field to user
+2. Add Total Earning Fields for Seller
+3. Add Total Credit Left Field for Purchaser
+4. Add List of Top-up Screen
+	Modify Listing screen screen as "Transaction Screen"
+5. Add Transaction Table
+6. Seller => Enter Card Information (Store it)
+7. Buy from Credit to give 5 % off.
