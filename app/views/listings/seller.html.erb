@@ -10,7 +10,8 @@
   <% @listings.each do |listing| %>
     <tr>
       <td>
-        <!--%= image_tag listing.image.url(:thumb) %-->
+                  <img src="assets/<%= listing.id %>.jpg" style="height:200px; width:300px;" />
+
       </td>
       <td><%= listing.name %></td>
       <td><%= listing.description %></td>
@@ -32,13 +33,6 @@
 </table>
 
 <br>
-
-<%= 'Total Earnings: ' %>
-<% @listings.each do |listing| %>
-
-  <%= listing.orders.sum(:amount).to_f %>
-
-<% end %>
 <br />
 <br>
 <% if user_signed_in? %>

@@ -13,7 +13,8 @@
 
   <% @orders.each do |order| %>
     <tr>
-      <td class="center"><%= image_tag order.listing.image.url(:thumb) %></td>
+      <td class="center">                  <img src="assets/<%= order.listing.id %>.jpg" style="height:200px; width:300px;" />
+</td>
       <td class="center"><%= order.listing.name %></td>
       <td class="center"><%= number_to_currency(order.listing.price) %></td>
       <td class="center"><%= order.seller.name %></td>
@@ -21,20 +22,3 @@
     </tr>
   <% end %>
 </table>
-
-<br>
-
-<% if user_signed_in? %>
-  <%= link_to 'New Listing', new_listing_path, class: "btn btn-link", data: { no_turbolink: true } %>
-  <script type="text/javascript" src="https://www.simplify.com/commerce/simplify.pay.js"></script>
-  <button data-sc-key="sbpb_YTU3NmYzMDMtZmU3Zi00NWQ1LTgwNDYtZDJhZjliZTZmZWQ3"
-        data-name="QuikFood Top-Up"
-        data-description="Top up your credits"
-        data-reference="99999"
-        data-amount="10000"
-        data-color="#12B830"
-        data-masterpass="true"
-        data-redirect-url="http://localhost:3000/simplify_confirm">
-        Top-Up your Credit
-</button>
-<% end %>

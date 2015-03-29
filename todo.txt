@@ -5,4 +5,4 @@
 	Modify Listing screen screen as "Transaction Screen"
 5. Add Transaction Table
 6. Seller => Enter Card Information (Store it)
-7. Buy from Credit to give 5 % off.
+7. Buy from Credit to give 5 % off.	

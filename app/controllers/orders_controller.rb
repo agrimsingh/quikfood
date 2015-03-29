@@ -83,7 +83,7 @@ class OrdersController < ApplicationController
         funding_card = mss.create_funding_card(account_number, expiry_month, expiry_year)
 
 
-        value = current_user.total_earnings.to_i.to_s #value from User Account rand(2**5..2**12).to_s
+        value = (current_user.total_earnings.to_f * 100).to_i.to_s
         currency = "840"
         funding_amount = mss.create_funding_amount(value, currency)
 
@@ -104,8 +104,9 @@ class OrdersController < ApplicationController
         card_acceptor_postal_code = '63101'
         card_acceptor_country = 'USA'
         card_acceptor = mss.create_card_acceptor(name, card_acceptor_city,card_acceptor_state, card_acceptor_postal_code, card_acceptor_country)
-        Rails.logger.info (current_user.total_earnings.to_s)
-        recieving_value = current_user.total_earnings.to_i.to_s #value from user accountrand(2**5..2**12).to_s
+
+        recieving_value = (current_user.total_earnings.to_f * 100).to_i.to_s
+        #value from user accountrand(2**5..2**12).to_s
         recieving_currency = "484"
         receiving_amount = mss.create_receiving_amount(recieving_value, recieving_currency)
 
