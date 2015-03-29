@@ -20,7 +20,7 @@ class TestController < ApplicationController
         sender_country = 'USA'
         sender_address = mss.create_sender_address(sender_line1, sender_line2, sender_city, sender_country_subdivision, sender_postal_code, sender_country)
 
-        account_number = '5184680430000006' 
+        account_number = '5184680430000261' 
         expiry_month = '11'
         expiry_year = '2015'
         funding_card = mss.create_funding_card(account_number, expiry_month, expiry_year)
@@ -37,7 +37,7 @@ class TestController < ApplicationController
         country = 'USA'
         receiver_address = mss.create_receiver_address(line1, line2, city, country_subdivision, postal_code, country)
 
-        account_number_receiver = '5184680430000014'
+        account_number_receiver = '5184680430000279'
         receiving_card = mss.create_receiving_card(account_number_receiver)
 
         name = 'My Local Bank'

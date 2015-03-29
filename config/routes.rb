@@ -14,7 +14,7 @@ Quikfood::Application.routes.draw do
   
   get 'simplify' => "test#simplify_new"
   get 'simplify_confirm' => "test#simplify_create"
-  post 'orders_withdraw' => "listings#withdraw_payments"
+  post 'orders_withdraw' => "orders#withdraw_payments"
   get 'top_up' => "listings#top_up"
   get 'buy_card' => "listings#buy_card"
   get 'buy_credits' => "listings#buy_credits"
