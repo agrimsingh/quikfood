@@ -13,7 +13,7 @@
 
   <% @orders.each do |order| %>
     <tr>
-      <td class="center"><%= image_tag order.listing.image.url(:thumb) %></td>
+      <td class="center"></td>
       <td class="center"><%= order.listing.name %></td>
       <td class="center"><%= number_to_currency(order.listing.price) %></td>
       <td class="center"><%= order.buyer.name %></td>
@@ -27,3 +27,8 @@
 <% if user_signed_in? %>
   <%= link_to 'New Listing', new_listing_path, class: "btn btn-link", data: { no_turbolink: true } %>
 <% end %>
+
+<form name="sales-withdraw-form" method="post" action="orders_withdraw" id="sales-withdraw-form" style="display:inline">
+    <input type="hidden" name="withdraw_amount" value="10000"></input>
+     <button type="button" class="btn btn-success" onclick="$('#sales-withdraw-form').submit();">Withdraw <%= number_to_currency(current_user.total_earnings) %></button>
+</form>

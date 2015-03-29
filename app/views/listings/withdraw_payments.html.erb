@@ -1,0 +1,8 @@
+Processing Results: </br>
+Transaction Reference: <%= @transfer.transaction_reference %></br>
+Transaction 0: <%= @transfer.transaction_history.transaction[0].inspect %></br>
+Transaction 0 Response Code: <%= @transfer.transaction_history.transaction[0].response.code %></br>
+Transaction 1 Response Code: <%= @transfer.transaction_history.transaction[1].response.code %>
+<br/>
+Payment Request ID: <%= @payment_request.request_id %></br>
+Payment Request Transction History: <%= @payment_request.transaction_history.transaction.inspect  %>
